@@ -32,4 +32,8 @@ private:
 	int m_y;
 };
 
+const Vector operator+ (const Vector& a, const Vector& b);
+const Vector operator- (const Vector& a, const Vector& b);
+const Vector operator* (const Vector& vector, const int& factor);
+
 #endif

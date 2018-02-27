@@ -91,3 +91,15 @@ const Vector Vector::operator- () const
 	result.m_y = -m_y;
 	return result;
 }
+const Vector operator+ (const Vector& a, const Vector& b)
+{
+	return Vector(a.getX() + b.getX(), a.getY() + b.getY());
+}
+const Vector operator- (const Vector& a, const Vector& b)
+{
+	return Vector(a.getX() - b.getX(), a.getY() - b.getY());
+}
+const Vector operator* (const Vector& vector, const int& factor)
+{
+	return Vector(vector.getX() * factor, vector.getY() * factor);
+}
