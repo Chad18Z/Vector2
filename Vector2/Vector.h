@@ -25,6 +25,8 @@ public:
 	void print();
 	Vector& operator=(const Vector& v);
 	friend ostream& operator<< (ostream& sout, const Vector& vector);
+	friend istream& operator>> (istream& sin, Vector& vector);
+	const Vector operator- () const;
 private:
 	int m_x;
 	int m_y;

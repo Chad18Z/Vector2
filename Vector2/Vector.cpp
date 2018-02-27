@@ -78,3 +78,16 @@ ostream& operator<< (ostream& sout, const Vector& vector)
 	sout << "(" << vector.m_x << ", " << vector.m_y << ")";
 	return sout;
 }
+istream& operator>>(istream& sin, Vector& vector)
+{
+	char a;
+	sin >> a >> vector.m_x >> a >> vector.m_y >> a;
+	return sin;
+}
+const Vector Vector::operator- () const
+{
+	Vector result;
+	result.m_x = -m_x;
+	result.m_y = -m_y;
+	return result;
+}
